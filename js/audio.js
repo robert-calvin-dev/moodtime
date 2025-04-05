@@ -10,7 +10,7 @@ const audioMap = {
 
 const videoMap = {
  calm: "assets/video/calm.mp4",
- anxious: "assets/video/anxiousmp4",
+ anxious: "assets/video/anxious.mp4",
  sad: "assets/video/sad.mp4",
  focused: "assets/video/focused.mp4",
  euphoric: "assets/video/euphoric.mp4",
