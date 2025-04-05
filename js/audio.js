@@ -11,11 +11,11 @@ const audioMap = {
 
 const videoMap = {
  lightest: "assets/video/rain.mp4",
- lighter: "assets/video/rain.mp4",
- light: "assets/video/rain.mp4",
- heavy: "assets/video/rain.mp4",
- heavier: "assets/video/rain.mp4",
- heaviest: "assets/video/rain.mp4"
+ lighter: "assets/video/rain1.mp4",
+ light: "assets/video/rain2.mp4",
+ heavy: "assets/video/rain3.mp4",
+ heavier: "assets/video/rain4.mp4",
+ heaviest: "assets/video/rain5.mp4"
 };
 
 let currentAudio = null;
