@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".clock-container");
   const buttons = document.querySelectorAll("button");
   const iconSwap = () => {
-    themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌙 Dark Mode" : "🌞 Light Mode";
+    themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌙 " : "🌞 Light Mode";
   };
 
   if (themeToggle) {
