@@ -9,11 +9,11 @@ const audioMap = {
 };
 
 const videoMap = {
- calm: "assets/video/calm_forest.mp4",
- anxious: "assets/video/rain_window.mp4",
- sad: "assets/video/sad_drizzle.mp4",
- focused: "assets/video/lofi_study_loop.mp4",
- euphoric: "assets/video/synth_galaxy.mp4",
+ calm: "assets/video/calm.mp4",
+ anxious: "assets/video/anxiousmp4",
+ sad: "assets/video/sad.mp4",
+ focused: "assets/video/focused.mp4",
+ euphoric: "assets/video/euphoric.mp4",
 };
 
 let currentAudio = null;
