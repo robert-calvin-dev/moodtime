@@ -13,29 +13,31 @@ body {
   font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: left;
+  height: auto;
   overflow: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 :root {
   --bg-color: #0d0d0d;
-  --text-color: #ffffff;
+  --text-color: #d1faff;
   --container-color: rgba(0, 0, 0, 0.6);
   --glow-color: #ffffff44;
 }
 
 body.light-mode {
   --bg-color: #f0f0f0;
-  --text-color: #ffffff;
+  --text-color: #ebffed;
   --container-color: rgba(255, 255, 255, 0.6);
   --glow-color: #00000033;
 }
 
 #clock {
-  background-color: #4d06061e;
+  background-color: #00000058;
   padding: 15px;
+  border-radius: 10%;
+  border: 1px dotted white;
 
 }
 
@@ -43,15 +45,17 @@ body.light-mode {
   text-align: center;
   padding: 2rem;
   max-width: 800px;
+  max-height:900px;
   background-color: var(--container-color);
-  border-radius: 16px;
+
+  border-radius: 20%;
   box-shadow: 0 0 20px var(--glow-color);
   backdrop-filter: blur(6px);
   transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .clock-display {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   margin-bottom: 2rem;
@@ -61,6 +65,7 @@ body.light-mode {
 .format-toggle {
   font-size: 1rem;
   margin-bottom: 2rem;
+  flex-direction: column;
 }
 
 .format-toggle label {
@@ -71,7 +76,7 @@ select#time-format {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
-  background-color: #1e1e1e;
+  background-color: #ffe6e600;
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
@@ -104,14 +109,14 @@ button[type="submit"] {
   font-size: 1rem;
   border: none;
   border-radius: 6px;
-  background-color: #22222200;
+  background-color: #ffe6e600;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #333;
+  background-color: hsla(0, 0%, 0%, 0);
 }
 
 #mood-status {
@@ -124,7 +129,7 @@ button[type="submit"]:hover {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
   align-items: center;
   margin-inline: auto;
   margin-bottom: 0.75rem;
@@ -134,8 +139,8 @@ button[type="submit"]:hover {
   padding: 0.5rem 1.25rem;
   font-size: 1rem;
   border-radius: 8px;
-  border: none;
-  background-color: #222;
+  border: 2px dotted white;
+  background-color: transparent;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -151,24 +156,24 @@ button[type="submit"]:hover {
 }
 
 #audio-controls input[type="range"] {
-  width: 200px;
+  width:100%;
   vertical-align: middle;
 }
 
 /* Mood-based glow effects */
-body[data-mood="calm"] .clock-container {
+body[data-mood="lightest"] .clock-container {
   box-shadow: 0 0 30px #00ffaa55;
 }
-body[data-mood="anxious"] .clock-container {
+body[data-mood="lighter"] .clock-container {
   box-shadow: 0 0 30px #88aaff55;
 }
-body[data-mood="sad"] .clock-container {
+body[data-mood="light"] .clock-container {
   box-shadow: 0 0 30px #7777ff55;
 }
-body[data-mood="focused"] .clock-container {
+body[data-mood="heavy"] .clock-container {
   box-shadow: 0 0 30px #ffffff55;
 }
-body[data-mood="euphoric"] .clock-container {
+body[data-mood="heavier"] .clock-container {
   box-shadow: 0 0 30px #ff00ff55;
 }
 
@@ -189,7 +194,7 @@ body[data-mood="euphoric"] .clock-container {
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   border: none;
-  background-color: #1e1e1e;
+  background-color: transparent;
   color: #fff;
   font-size: 1rem;
 }
@@ -209,7 +214,8 @@ body[data-mood="euphoric"] .clock-container {
   }
 
   .format-toggle {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    flex-direction: column;
   }
 
   select#time-format {
@@ -229,4 +235,8 @@ body[data-mood="euphoric"] .clock-container {
   .audio-controls input[type="range"] {
     width: 150px;
   }
+}
+.topdisplay, .moodsubmit, .bottomdisplay {
+  display: flex;
+  justify-content: space-around;
 }

@@ -15,7 +15,7 @@ $mood = $_POST['mood'] ?? '';
 $mood = trim($mood);
 $mood = $conn->real_escape_string($mood);
 
-if (!in_array($mood, ['calm', 'anxious', 'sad', 'focused', 'euphoric'])) {
+if (!in_array($mood, ['lightest', 'lighter', 'light', 'heavy', 'heavier'])) {
   http_response_code(400);
   echo "Invalid mood.";
   exit;

@@ -1,19 +1,21 @@
 // audio.js
 
 const audioMap = {
- calm: "assets/audio/calm_forest.mp3",
- anxious: "assets/audio/soft_rain_anxious.mp3",
- sad: "assets/audio/mournful_piano.mp3",
- focused: "assets/audio/cafe_lofi_loop.mp3",
- euphoric: "assets/audio/celestial_synths.mp3",
+ lightest: "assets/audio/lightest.mp3",
+ lighter: "assets/audio/lighter.mp3",
+ light: "assets/audio/light.mp3",
+ heavy: "assets/audio/heavy.mp3",
+ heavier: "assets/audio/heavier.mp3",
+ heaviest: "assets/audio/heaviest.mp3"
 };
 
 const videoMap = {
- calm: "assets/video/calm.mp4",
- anxious: "assets/video/anxious.mp4",
- sad: "assets/video/sad.mp4",
- focused: "assets/video/focused.mp4",
- euphoric: "assets/video/euphoric.mp4",
+ lightest: "assets/video/rain.mp4",
+ lighter: "assets/video/rain.mp4",
+ light: "assets/video/rain.mp4",
+ heavy: "assets/video/rain.mp4",
+ heavier: "assets/video/rain.mp4",
+ heaviest: "assets/video/rain.mp4"
 };
 
 let currentAudio = null;

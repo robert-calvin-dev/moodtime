@@ -1,29 +1,29 @@
 // mood.js
 
 const moodColors = {
-  calm: {
+  lightest: {
     dark: "rgba(16, 0, 76, 0.37)",
-    light: "rgba(229, 255, 0, 0.41)",
+    light: "rgba(0, 255, 132, 0.3)",
   },
-  anxious: {
-    dark: "rgba(0, 15, 125, 0.41)",
-    light: "rgba(255, 145, 0, 0.41)"
+  lighter: {
+    dark: "rgba(0, 94, 125, 0.41)",
+    light: "rgba(0, 255, 13, 0.3)"
   },
-  sad: {
+  light: {
     dark: "rgba(0, 139, 118, 0.41)",
-    light: "rgba(232, 104, 84, 0.41)"
+    light: "rgba(3, 49, 255, 0.3)"
   },
-  focused: {
-    dark: "rgba(0, 100, 0, 0.41)",
-    light: "rgba(153, 255, 153, 0.41)"
+  heavy: {
+    dark: "rgba(59, 5, 117, 0.41)",
+    light: "rgba(230, 0, 255, 0.3)"
   },
-  euphoric: {
+  heavier: {
     dark: "rgba(127, 0, 66, 0.41)",
-    light: "rgba(252, 108, 192, 0.41)"
+    light: "rgba(0, 225, 255, 0.3)"
   },
-  stressful: {
-    dark: "rgba(123, 127, 0, 0.41)",
-    light: "rgba(239, 236, 50, 0.41)"
+  heaviest: {
+    dark: "rgba(0, 123, 127, 0.41)",
+    light: "rgba(0, 255, 128, 0.3)"
   }
 
 };
@@ -41,11 +41,10 @@ window.addEventListener("DOMContentLoaded", () => {
       const isLight = document.body.classList.contains("light-mode");
 
       themeToggle.style.padding = "0.5rem 1.5rem";
-      themeToggle.style.fontSize = "4rem";
+      themeToggle.style.fontSize = "2rem";
       themeToggle.style.border = "none";
       themeToggle.style.borderRadius = "6px";
-      themeToggle.style.backgroundColor = isLight ? "#e0e0e0" : "#222";
-      themeToggle.style.color = isLight ? "#111" : "#fff";
+   
       themeToggle.style.cursor = "pointer";
       themeToggle.style.transition = "background-color 0.3s ease, color 0.3s ease";
       themeToggle.style.boxShadow = "0 2px 6px rgba(0, 0, 0, 0.2)";
@@ -55,22 +54,22 @@ window.addEventListener("DOMContentLoaded", () => {
         if (mood && moodColors[mood]) {
           container.style.backgroundColor = isLight ? moodColors[mood].light : moodColors[mood].dark;
         } else {
-          container.style.backgroundColor = isLight ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.7)";
+          container.style.backgroundColor = isLight ? "rgba(255, 255, 255, 0)" : "rgba(0, 0, 0, 0)";
         }
         container.style.boxShadow = "0 4px 30px rgba(0,0,0,0.1)";
         container.style.backdropFilter = "blur(8px)";
-        container.style.border = "1px solid rgba(255,255,255,0.1)";
+        container.style.border = "2px solid rgb(255, 255, 255)";
         container.style.borderRadius = "12px";
         container.style.fontFamily = "'Inter', 'Roboto', sans-serif";
       }
 
       buttons.forEach(btn => {
-        btn.style.backgroundColor = isLight ? "#ddd" : "#222";
-        btn.style.color = isLight ? "#000" : "#fff";
-        btn.style.border = "none";
+        btn.style.backgroundColor = isLight ? "rgba(255, 255, 255, 0)" : "rgba(255, 255, 255, 0)";
+        btn.style.color = isLight ? "#fff" : "#fff";
+        btn.style.border = "1px dotted white";
         btn.style.borderRadius = "6px";
         btn.style.padding = "0.5rem 1.2rem";
-        btn.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+        btn.style.boxShadow = "0 2px 6px rgb(0, 0, 0)";
         btn.style.transition = "all 0.2s ease";
       });
 
@@ -205,6 +204,6 @@ function renderMoodHistory() {
   });
 
   container.appendChild(list);
-  container.style.display = "none";
+
 }
 

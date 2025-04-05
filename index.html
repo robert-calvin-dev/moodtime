@@ -3,57 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MoodTime Clock</title>
+  <title>Rain Clock</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <main class="clock-container">
-    <h1>MoodTime Clock</h1>
-    <button id="toggle-theme"><h1>🌞</h1></button>
-    <div class="clock-display" id="clock"></div>
-        <div class="format-toggle">
-          <label for="time-format">Time Format:</label>
-          <select id="time-format">
-            <option value="24">24 Hour</option>
-            <option value="12">12 Hour</option>
-          </select>
-        </div>
+    <div class="topdisplay">
+      <div class="nameandformat">
+        
+      <h1>Rain Clock</h1>
+      <br>
+      <div class="format-toggle">
+        <label for="time-format">Time Format:</label>
+        <select id="time-format">
+          <option value="24">24 Hour</option>
+          <option value="12">12 Hour</option>
+        </select>
+      </div>
+      <button id="toggle-theme"><h1>🌞</h1></button>
+      </div>
       
+   
+    </div>
+    <br>
+    <div class="clock-display" id="clock"></div>
+    
+    
         
       </div>
       
     </div>
 
     <div class="mood-checkin">
-      <h2>How are you feeling?</h2>
+      <h2>Rain Sounds</h2>
       <form id="mood-form">
         <div class="mood-options">
-          <label><input type="radio" name="mood" value="calm"> Calm</label>
-          <label><input type="radio" name="mood" value="anxious"> Anxious</label>
-          <label><input type="radio" name="mood" value="sad"> Sad</label>
-          <label><input type="radio" name="mood" value="focused"> Focused</label>
-          <label><input type="radio" name="mood" value="euphoric"> Euphoric</label>
-          <label><input type="radio" name="mood" value="stressful"> Stressful</label>
+          <label><input type="radio" name="mood" value="lightest"> Lightest</label>
+          <label><input type="radio" name="mood" value="lighter"> Lighter</label>
+          <label><input type="radio" name="mood" value="light"> Light</label>
+          <label><input type="radio" name="mood" value="heavy"> Heavy</label>
+          <label><input type="radio" name="mood" value="heavier"> Heavier</label>
+          <label><input type="radio" name="mood" value="heaviest"> Heaviest</label>
         </div>
+        <div class="moodsubmit">
         <button type="submit">Submit Mood</button>
+        <div id="mood-status"></div>
+    
+    </div>
+
+
         
 
-        <div id="mood-history"></div>
-
       </form>
-
-      <div id="mood-status"></div>
-      <button id="toggle-history">Mood History</button>
     </div>
-
-    <div class="audio-controls">
-      <button id="mute-toggle">🔇 Mute</button>
-      <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5" />
-      <button id="toggle-audio">▶️ Play</button>
-
-
-    </div>
+    <br>
+  <br>
+  <br>
+    <div class="bottomdisplay">
+      <div>
     
+    <div id="mood-history"></div>
+    </div>
+
+    
+    <div class="audio-controls">
+      <button id="toggle-audio">▶️ Play</button>
+      <br><br>
+      <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5" />
+      <br>
+      <button id="mute-toggle">🔇 Mute</button>
+      
+      
+
+
+    </div>
+    </div>
 
   </main>
 
