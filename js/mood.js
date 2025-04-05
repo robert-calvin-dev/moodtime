@@ -2,16 +2,16 @@
 
 const moodColors = {
   calm: {
-    dark: "rgba(16, 0, 76, 0.41)",
-    light: "rgba(146, 139, 171, 0.41)",
+    dark: "rgba(16, 0, 76, 0.37)",
+    light: "rgba(229, 255, 0, 0.41)",
   },
   anxious: {
     dark: "rgba(0, 15, 125, 0.41)",
-    light: "rgba(100, 143, 250, 0.41)"
+    light: "rgba(255, 145, 0, 0.41)"
   },
   sad: {
     dark: "rgba(0, 139, 118, 0.41)",
-    light: "rgba(84, 232, 210, 0.41)"
+    light: "rgba(232, 104, 84, 0.41)"
   },
   focused: {
     dark: "rgba(0, 100, 0, 0.41)",
