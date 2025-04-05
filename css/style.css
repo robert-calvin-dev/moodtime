@@ -1,0 +1,226 @@
+/* style.css */
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color, #0d0d0d);
+  color: var(--text-color, #ffffff);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --container-color: rgba(0, 0, 0, 0.6);
+  --glow-color: #ffffff44;
+}
+
+body.light-mode {
+  --bg-color: #f0f0f0;
+  --text-color: #111;
+  --container-color: rgba(255, 255, 255, 0.6);
+  --glow-color: #00000033;
+}
+
+.clock-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  background-color: var(--container-color);
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--glow-color);
+  backdrop-filter: blur(6px);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.clock-display {
+  font-size: 8rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.format-toggle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.format-toggle label {
+  margin-right: 0.5rem;
+}
+
+select#time-format {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+select#time-format:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #333;
+}
+
+.mood-checkin {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.mood-checkin h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mood-options label {
+  display: inline-block;
+  margin: 0.3rem 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+}
+
+#mood-status {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #a0ffa0;
+}
+
+.audio-controls {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+}
+
+.audio-controls button {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.audio-controls button:hover {
+  background-color: #333;
+}
+
+#audio-controls button,
+#audio-controls input[type="range"] {
+  margin: 0 0.5rem;
+}
+
+#audio-controls input[type="range"] {
+  width: 200px;
+  vertical-align: middle;
+}
+
+/* Mood-based glow effects */
+body[data-mood="calm"] .clock-container {
+  box-shadow: 0 0 30px #00ffaa55;
+}
+body[data-mood="anxious"] .clock-container {
+  box-shadow: 0 0 30px #88aaff55;
+}
+body[data-mood="sad"] .clock-container {
+  box-shadow: 0 0 30px #7777ff55;
+}
+body[data-mood="focused"] .clock-container {
+  box-shadow: 0 0 30px #ffffff55;
+}
+body[data-mood="euphoric"] .clock-container {
+  box-shadow: 0 0 30px #ff00ff55;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+
+.top-controls .format-toggle label {
+  margin-right: 0.5rem;
+}
+
+.top-controls select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1rem;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .clock-display {
+    font-size: 6rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .clock-display {
+    font-size: 4rem;
+  }
+
+  .format-toggle {
+    font-size: 0.9rem;
+  }
+
+  select#time-format {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .mood-checkin h2 {
+    font-size: 1.2rem;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .audio-controls input[type="range"] {
+    width: 150px;
+  }
+}
