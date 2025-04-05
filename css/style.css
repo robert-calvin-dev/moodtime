@@ -45,7 +45,7 @@ body.light-mode {
   text-align: center;
   padding: 2rem;
   max-width: 800px;
-  max-height:900px;
+  max-height: auto;
   background-color: var(--container-color);
 
   border-radius: 20%;
@@ -242,6 +242,9 @@ body[data-mood="heavier"] .clock-container {
 
   .audio-controls input[type="range"] {
     width: 150px;
+  }
+  .bottomdisplay {
+    flex-direction: column;
   }
 }
 .topdisplay, .moodsubmit, .bottomdisplay {
