@@ -28,14 +28,14 @@ body {
 
 body.light-mode {
   --bg-color: #f0f0f0;
-  --text-color: #111;
+  --text-color: #ffffff;
   --container-color: rgba(255, 255, 255, 0.6);
   --glow-color: #00000033;
 }
 
 #clock {
-  background-color: #0d0d0d;
-  padding: 40px;
+  background-color: #4d06061e;
+  padding: 15px;
 
 }
 

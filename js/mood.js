@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const isLight = document.body.classList.contains("light-mode");
 
       themeToggle.style.padding = "0.5rem 1.5rem";
-      themeToggle.style.fontSize = "1rem";
+      themeToggle.style.fontSize = "4rem";
       themeToggle.style.border = "none";
       themeToggle.style.borderRadius = "6px";
       themeToggle.style.backgroundColor = isLight ? "#e0e0e0" : "#222";
