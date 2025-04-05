@@ -202,6 +202,10 @@ body[data-mood="heavier"] .clock-container {
 
 /* Tablet */
 @media (max-width: 1024px) {
+  body {
+    min-height: fit-content;
+    overflow: scroll;
+  }
   .clock-display {
     font-size: 6rem;
   }
@@ -209,6 +213,10 @@ body[data-mood="heavier"] .clock-container {
 
 /* Mobile */
 @media (max-width: 768px) {
+  body {
+    min-height: fit-content;
+    overflow: scroll;
+  }
   .clock-display {
     font-size: 4rem;
   }
