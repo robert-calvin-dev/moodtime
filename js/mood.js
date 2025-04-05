@@ -2,24 +2,24 @@
 
 const moodColors = {
   calm: {
-    dark: "rgb(17, 0, 76)",
-    light: "rgb(146, 139, 171)",
+    dark: "rgba(16, 0, 76, 0.41)",
+    light: "rgba(146, 139, 171, 0.41)",
   },
   anxious: {
-    dark: "rgba(139, 0, 0, 0.6)",
-    light: "rgba(255, 102, 102, 0.6)"
+    dark: "rgba(0, 15, 125, 0.41)",
+    light: "rgba(100, 143, 250, 0.41)"
   },
   sad: {
-    dark: "rgba(0, 0, 139, 0.6)",
-    light: "rgba(102, 153, 255, 0.6)"
+    dark: "rgba(0, 139, 118, 0.41)",
+    light: "rgba(84, 232, 210, 0.41)"
   },
   focused: {
-    dark: "rgba(0, 100, 0, 0.6)",
-    light: "rgba(153, 255, 153, 0.6)"
+    dark: "rgba(0, 100, 0, 0.41)",
+    light: "rgba(153, 255, 153, 0.41)"
   },
   euphoric: {
-    dark: "rgba(204, 204, 0, 0.6)",
-    light: "rgba(255, 255, 153, 0.6)"
+    dark: "rgba(127, 0, 66, 0.41)",
+    light: "rgba(252, 108, 192, 0.41)"
   }
 };
 
