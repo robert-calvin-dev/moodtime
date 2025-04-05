@@ -20,7 +20,12 @@ const moodColors = {
   euphoric: {
     dark: "rgba(127, 0, 66, 0.41)",
     light: "rgba(252, 108, 192, 0.41)"
+  },
+  stressful: {
+    dark: "rgba(123, 127, 0, 0.41)",
+    light: "rgba(239, 236, 50, 0.41)"
   }
+
 };
 
 window.addEventListener("DOMContentLoaded", () => {
