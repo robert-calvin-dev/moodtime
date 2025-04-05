@@ -2,8 +2,8 @@
 
 const moodColors = {
   calm: {
-    dark: "rgba(75, 0, 130, 0.6)",
-    light: "rgba(180, 130, 255, 0.6)"
+    dark: "rgb(17, 0, 76)",
+    light: "rgb(146, 139, 171)",
   },
   anxious: {
     dark: "rgba(139, 0, 0, 0.6)",
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".clock-container");
   const buttons = document.querySelectorAll("button");
   const iconSwap = () => {
-    themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌙 " : "🌞 Light Mode";
+    themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌙 " : "🌞";
   };
 
   if (themeToggle) {
